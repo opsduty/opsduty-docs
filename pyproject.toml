@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "opsduty-docs"
+version = "0.0.1"
+description = "Incident management system."
+authors = ["Eirik Martiniussen Sylliaas <eirik@sylliaas.no>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+mkdocs-material = "^9.5.48"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
