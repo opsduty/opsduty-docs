@@ -15,4 +15,10 @@ jobs:
         with:
           tool-versions-path: .tool-versions
 
-      - run: mkdocs build
+      - name: Setup Node project
+        uses: ./.github/actions/setup-node
+        with:
+          node-version-file: .tool-versions
+
+      - run: make lint
+      - run: make build
