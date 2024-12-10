@@ -1,0 +1,15 @@
+{
+  "name": "opsduty-docs",
+  "version": "0.0.1",
+  "description": "Incident management system.",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "prettier:format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,json,yml,yaml,md}\"",
+    "prettier:lint": "prettier --check \"**/*.{js,jsx,ts,tsx,css,scss,json,yml,yaml,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}

@@ -1,0 +1,82 @@
+---
+name: Setup NPM
+description: |
+  Installs Javascript/Typescript dependencies with NPM.
+inputs:
+  node-version:
+    description: |
+      By default it reads the version from .tool-versions.
+    required: false
+    default: ""
+  node-version-file:
+    description: |
+      File containing the version Spec of the version to use.  Examples: .nvmrc, .node-version, .tool-versions.
+    required: false
+    default: ".tool-versions"
+  cache:
+    description: |
+      Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm.
+      Package manager should be pre-installed
+    required: false
+    default: "npm"
+  working-directory:
+    description: |
+      The repo path that contains package.json
+      Defaults to the root of the repository.
+    required: false
+    default: "."
+  lock-file:
+    description: |
+      Lock file name. Either package-lock.json or yarn.lock.
+      Default is package-lock.json.
+    required: false
+    default: package-lock.json
+  disable-npm-ci:
+    description: |
+      Do not run 'npm ci' after setting up node.
+    required: false
+    default: "false"
+  args:
+    description: |
+      NPM config arguments passed to the NPM cli.
+    required: false
+    default: ""
+  checkout:
+    description: |
+      Checkout repo if needed by setting to 'true'.
+      Default is false.
+    required: false
+    default: "false"
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v4
+      if: ${{ inputs.checkout == 'true' }}
+
+    # Use node version from input
+    - uses: actions/setup-node@v4
+      if: ${{ inputs.node-version != '' }}
+      with:
+        cache-dependency-path: ${{ inputs.working-directory }}/${{ inputs.lock-file }}
+        cache: ${{ inputs.cache }}
+        node-version: ${{ inputs.node-version }}
+
+    # Use node version from default .tool-versions file
+    - uses: actions/setup-node@v4
+      if: ${{ inputs.node-version == '' }}
+      with:
+        cache-dependency-path: ${{ inputs.working-directory }}/${{ inputs.lock-file }}
+        cache: ${{ inputs.cache }}
+        node-version-file: ${{ inputs.node-version-file }}
+
+    - name: Output NPM config
+      if: runner.debug == '1'
+      shell: bash
+      run: |
+        npm config ls -l
+
+    - run: npm ci ${{ inputs.args }}
+      shell: bash
+      if: ${{ inputs.disable-npm-ci == 'false' }}
+      working-directory: ${{ inputs.working-directory }}
