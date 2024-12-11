@@ -7,4 +7,5 @@ of the existing [clients](clients.md), but it is also possible to use tools like
 
 ## Versions
 
-- [V1](https://opsduty.io/api/v1) - Current version
+- [V1](https://opsduty.io/api/v1) - Current version [[Swagger](swagger.md)]
+  [[OpenAPI](openapi.md)]
