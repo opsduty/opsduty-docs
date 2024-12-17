@@ -1,6 +1,6 @@
-# opsduty-api-v1
+# opsduty-client
 
-`opsduty-api-v1` is the official OpsDuty client in Python, it is developed by
+`opsduty-client` is the official OpsDuty client in Python, it is developed by
 OpsDuty. The client is built automatically based on the
 [OpenAPI Specification](openapi.md).
 
@@ -11,7 +11,7 @@ OpsDuty. The client is built automatically based on the
 Installation is as simple as:
 
 ```bash
-pip install opsduty-api-v1
+pip install opsduty-client
 ```
 
 ### Usage
