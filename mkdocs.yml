@@ -83,15 +83,19 @@ nav:
   - API:
       - Getting started: api/index.md
       - OAuth2: api/oauth2.md
-      - Clients: api/clients.md
       - Swagger: api/swagger.md
       - OpenAPI: api/openapi.md
+      - Clients:
+          - Python:
+              - opsduty-client: api/opsduty-client.md
   - Apps:
       - Getting started: apps/index.md
       - Android: apps/android.md
       - iOS: apps/ios.md
   - CLI:
       - Getting started: cli/index.md
+      - Heartbeats: cli/heartbeats.md
+      - Schedules: cli/schedules.md
 
 markdown_extensions:
   - tables
