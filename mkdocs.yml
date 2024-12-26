@@ -92,6 +92,8 @@ nav:
       - Getting started: apps/index.md
       - Android: apps/android.md
       - iOS: apps/ios.md
+      - Notifications: apps/notifications.md
+      - Tips and Tricks: apps/tips-and-tricks.md
   - CLI:
       - Getting started: cli/index.md
       - Heartbeats: cli/heartbeats.md
