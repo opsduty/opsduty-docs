@@ -78,24 +78,56 @@ nav:
       - Welcome to OpsDuty: index.md
       - Why use OpsDuty: why.md
       - Help with OpsDuty: help_with_opsduty.md
+
   - Concepts:
-      - Getting started: concepts/index.md
+      - Getting Started: concepts/index.md
+      - Incidents: concepts/incidents.md
+      - Analytics: concepts/analytics.md
+      - Labels: concepts/labels.md
+      - Heartbeat Monitoring: concepts/heartbeat-monitoring.md
+
+      - Escalations:
+          - Services: concepts/escalations/services.md
+          - Schedules: concepts/escalations/schedules.md
+          - Escalation Policies: concepts/escalations/escalation-policies.md
+
+      - Event Processing:
+          - Receive Channels: concepts/event-processing/receive-channels.md
+          - Routing Rules: concepts/event-processing/routing-rules.md
+          - Event Orchestrations: concepts/event-processing/event-orchestrations.md
+
+      - Users:
+          - Members: concepts/users/members.md
+          - Teams: concepts/users/teams.md
+          - Settings: concepts/users/settings.md
+
+      - Organization:
+          - Single Sign-On: concepts/organization/single-sign-on.md
+          - Settings: concepts/organization/settings.md
+
+      - Integrations:
+          - Incoming Calls: concepts/integrations/incoming-calls.md
+          - Slack: concepts/integrations/slack.md
+          - Webhook: concepts/integrations/webhooks.md
+
   - API:
-      - Getting started: api/index.md
+      - Getting Started: api/index.md
       - OAuth2: api/oauth2.md
       - Swagger: api/swagger.md
       - OpenAPI: api/openapi.md
       - Clients:
           - Python:
               - opsduty-client: api/opsduty-client.md
+
   - Apps:
-      - Getting started: apps/index.md
+      - Getting Started: apps/index.md
       - Android: apps/android.md
       - iOS: apps/ios.md
       - Notifications: apps/notifications.md
       - Tips and Tricks: apps/tips-and-tricks.md
+
   - CLI:
-      - Getting started: cli/index.md
+      - Getting Started: cli/index.md
       - Heartbeats: cli/heartbeats.md
       - Schedules: cli/schedules.md
 
