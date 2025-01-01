@@ -17,6 +17,10 @@ be sent to OpsDuty using one of our integrations.
 - [Incoming Calls](integrations/incoming-calls.md) lets you use OpsDuty to route
   incoming phone calls to the desired person, this is a great way to handle
   incidents in real time.
+- [Heartbeat Monitoring](heartbeat-monitoring.md) can also generate incidents in
+  OpsDuty, but it differs slightly from other signal sources. In this case, the
+  event is triggered by OpsDuty itself when a CRON job or periodic task fails to
+  check in as expected.
 
 ## Event Processing
 
