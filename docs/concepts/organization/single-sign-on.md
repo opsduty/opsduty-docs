@@ -53,11 +53,34 @@ redirect them to the SAML provider for authentication.
 
 ### Configuration
 
-1. Set up an entity in your SAML-compatible authentication provider.
-2. Enable the `Enable SAML2 authentication` checkbox.
+1. Enable the `Enable SAML2 authentication` checkbox.
+2. Set up an entity in your SAML-compatible authentication provider. The OpsDuty
+   ACS and Metadata URL can be seen above the form.
 3. Configure the `Metadata URL`, which can be obtained from your authentication
    provider.
+4. Save the form to apply your changes.
 
 ## Provisioning
 
-### SCIM
+SAML and Google authentication enable users to verify their identities, but
+users must first be invited and registered before these authentication methods
+can be utilized. The SCIM2 protocol simplifies user and team provisioning by
+allowing third-party systems to automate the process. This protocol is widely
+supported by most major authentication providers.
+
+### SCIM2
+
+The SCIM2 protocol can be used to provision users and teams in OpsDuty.
+
+#### Configuration
+
+1. Enable the `Enable SCIM2 provisioning` checkbox.
+2. Select a default role to apply to all new members added by the SCIM2
+   connector. The user roles can be changed later in by admins.
+3. [OPTIONAL] Enable the `Regenerate credentials on save` switch to generate new
+   SCIM2 API credentials. The credentials is used by the authentication provider
+   to access the SCIM2 provisioning API in OpsDuty.
+4. Save the form to apply your changes.
+5. The `SCIM connector base URL`, `Basic auth username`, and
+   `Basic auth password` is now visible above the form. Use it to configure the
+   SCIM2 connector.
