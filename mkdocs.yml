@@ -102,8 +102,8 @@ nav:
           - Settings: concepts/users/settings.md
 
       - Organization:
-          - Single Sign-On: concepts/organization/single-sign-on.md
           - Settings: concepts/organization/settings.md
+          - Single Sign-On: concepts/organization/single-sign-on.md
 
       - Integrations:
           - Incoming Calls: concepts/integrations/incoming-calls.md
