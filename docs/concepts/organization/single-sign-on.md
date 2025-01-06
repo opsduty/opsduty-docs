@@ -53,12 +53,18 @@ redirect them to the SAML provider for authentication.
 
 ### Configuration
 
-1. Enable the `Enable SAML2 authentication` checkbox.
-2. Set up an entity in your SAML-compatible authentication provider. The OpsDuty
-   ACS and Metadata URL can be seen above the form.
-3. Configure the `Metadata URL`, which can be obtained from your authentication
-   provider.
-4. Save the form to apply your changes.
+1.  Enable the `Enable SAML2 authentication` checkbox.
+2.  Set up an entity in your SAML-compatible authentication provider. The
+    OpsDuty ACS and Metadata URL can be seen above the form.
+
+    OpsDuty requires the payload received from the authentication provider
+    during user authentication to include the attributes `email`, `firstName`,
+    and `lastName`. These attributes are used to match the SAML session with
+    users in OpsDuty.
+
+3.  Configure the `Metadata URL`, which can be obtained from your authentication
+    provider.
+4.  Save the form to apply your changes.
 
 ## Provisioning
 
