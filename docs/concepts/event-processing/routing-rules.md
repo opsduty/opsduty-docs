@@ -8,6 +8,18 @@ determine which service an incident should be assigned to.
 Routing rules can evaluate both the current time and the incoming data to
 determine the appropriate service destination.
 
+## Routing Key
+
+In OpsDuty, each routing rule is assigned a unique routing key. This key is used
+to direct incident data to the appropriate routing rule.
+
+Currently, the routing key is only utilized by the webhook integration. To
+enable a routing rule to process data, replace the `<routing-key>` portion of
+the URL with the specific routing key for that rule.
+
+Example Webhook URL:
+`https://opsduty.io/integrations/webhooks/enque/event/<webhook-integration-key>/<routing-key>`
+
 ## Default Service
 
 Each routing rule must have a default service configured. If no rule matches the
