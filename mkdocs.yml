@@ -83,8 +83,9 @@ nav:
       - Getting Started: concepts/index.md
       - Incidents: concepts/incidents.md
       - Analytics: concepts/analytics.md
-      - Labels: concepts/labels.md
       - Heartbeat Monitoring: concepts/heartbeat-monitoring.md
+      - Labels: concepts/labels.md
+      - Playbooks: concepts/playbooks.md
 
       - Escalations:
           - Services: concepts/escalations/services.md
