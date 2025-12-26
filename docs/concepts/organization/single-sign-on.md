@@ -32,7 +32,7 @@ Your users can use the `Login with Google` button on the
 
     !!! danger
 
-         OpsDuty will create any missing user account on successfull authentication
+         OpsDuty will create any missing user account on successful authentication
          attempts when `Register unknown accounts` is enabled. It is advisable to enable this
          only if you have complete trust in all members in your Google organization. If disabled,
          users need an invite before login with Google is available.

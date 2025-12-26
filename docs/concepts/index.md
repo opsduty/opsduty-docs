@@ -1,13 +1,13 @@
 # Concepts
 
-Incident Management consists of multiple steps, everyting from start to finish,
+Incident Management consists of multiple steps, everything from start to finish,
 including initial signals, responder notifications, and post-incident
 evaluations can be done in OpsDuty.
 
 ## Signals
 
-OpsDuty needs to be notified when a problem occour in your system. Signals can
-be sent to OpsDuty using one of our integrations.
+OpsDuty needs to be notified when a problem occur in your system. Signals can be
+sent to OpsDuty using one of our integrations.
 
 - [Webhooks](integrations/webhooks.md) is the most dynamic way to ingest signals
   into OpsDuty, OpsDuty can parse payloads from any system as long as the

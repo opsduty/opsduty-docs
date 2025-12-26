@@ -16,7 +16,7 @@ suit your preferences.
 1.  **Sound**
 
     The OpsDuty app comes with a few different sounds. The best way to find a
-    sound you like is to save the moble app settings form after changing the
+    sound you like is to save the mobile app settings form after changing the
     sound and then send a test push message.
     [See Limitations for Android.](notifications.md#android)
 
@@ -34,7 +34,7 @@ suit your preferences.
 
 ## Send Test Notifications
 
-Your device is listed bellow the `Push devices` section on the
+Your device is listed below the `Push devices` section on the
 [Notifications](https://opsduty.io/app/user/notifications) page in OpsDuty after
 you have downloaded the App and logged in.
 
