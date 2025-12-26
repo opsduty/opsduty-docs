@@ -52,7 +52,7 @@ test how the device will behave when a push message is sent to it.
 
 ### Mobile App Settings
 
-The mobile app settings is documented bellow the
+The mobile app settings is documented below the
 [apps section](../../apps/notifications.md).
 
 ## Security

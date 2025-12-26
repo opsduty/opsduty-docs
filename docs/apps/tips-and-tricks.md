@@ -14,4 +14,4 @@ recognized as such when the contact is saved.
 1. Open the OpsDuty app
 2. Click `Profile` in the lower right corner
 3. Click the `Settings` button
-4. Click `Create OpsDuty contact` to create the contct in your contact list
+4. Click `Create OpsDuty contact` to create the contact in your contact list

@@ -2,7 +2,7 @@ An essential part of incident management is understanding your incidents and
 their origins. Efficiently handling incidents and resolving them as quickly as
 possible improves uptime and reduces customer friction.
 
-OpaDuty offers an [analytics system](https://opsduty.io/app/analytics/incidents)
+OpsDuty offers an [analytics system](https://opsduty.io/app/analytics/incidents)
 that allows you to explore where your incidents occur and how long it takes to
 resolve them across services.
 

@@ -29,7 +29,7 @@ Options:
 
 Commands:
   heartbeats  Commands for managing and monitoring heartbeats.
-  schedules   Commands for accesing schedules.
+  schedules   Commands for accessing schedules.
 
   Command-line utility for interfacing with OpsDuty.
 ```

@@ -18,7 +18,7 @@ visible in the incident browser.
 You can archive incidents that occurred before a specified date and time. The
 archive date can also be modified, even to an earlier date than the current one.
 
-When incidents are archived, any open incidents created before the archieve date
+When incidents are archived, any open incidents created before the archive date
 and time will be closed, and ongoing escalations will be halted.
 
 ## Diagnostics

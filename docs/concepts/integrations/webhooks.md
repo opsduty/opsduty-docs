@@ -10,9 +10,9 @@ A new webhook integration can be created on the
 ## Configuration
 
 The webhook name can be changed, this is just used as a verbose name to make it
-easier indentify what the webhook is used for.
+easier identify what the webhook is used for.
 
-The webhook can also be but into a disabled state, data posted to the webhook
+The webhook can also be put into a disabled state, data posted to the webhook
 while the webhook is disabled will not be processed by OpsDuty.
 
 ### Receive Channel

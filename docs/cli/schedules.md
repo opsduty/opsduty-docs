@@ -7,13 +7,13 @@ time. The CLI provides tools to manage and interact with schedules.
 $ opsduty schedules --help
 Usage: opsduty schedules [OPTIONS] COMMAND [ARGS]...
 
-  Commands for accesing schedules.
+  Commands for accessing schedules.
 
 Options:
   -h, --help  Show this message and exit.
 
 Commands:
-  shifts  Commands for accesing shifts in a schedule.
+  shifts  Commands for accessing shifts in a schedule.
 ```
 
 ## Shifts
