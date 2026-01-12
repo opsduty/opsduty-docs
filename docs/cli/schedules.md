@@ -21,12 +21,12 @@ Commands:
 ### List shifts in a month
 
 ```bash
-$ opsduty schedules shifts --schedule-id 1 list --month 12-2024 --timezone Europe/Oslo
+$ opsduty schedules shifts --schedule-id 1 list --month 12-2025 --timezone Europe/Oslo
 
 schedule_id: 1
 shifts:
-- end: '2024-12-01T09:00:00Z'
-  start: '2024-11-30T09:00:00Z'
+- end: '2025-12-01T09:00:00Z'
+  start: '2025-11-30T09:00:00Z'
   users:
   - ...
 ...
