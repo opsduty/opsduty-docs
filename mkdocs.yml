@@ -4,9 +4,8 @@ strict: true
 site_url: https://docs.opsduty.io
 repo_name: opsduty/opsduty-docs
 
-copyright: >
-  Copyright &copy; 2026 OpsDuty -
-  <a href="#__consent">Cookie Settings</a>
+hooks:
+  - hooks.py
 
 plugins:
   - social
