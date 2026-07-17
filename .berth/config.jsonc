@@ -1,0 +1,34 @@
+{
+  // Slot pool. Slots 1..count are leased to workspaces; slot 0's band belongs to the main
+  // checkout, which is why this project owns 14800-14909 and not just 14810-14909.
+  //
+  // Why 14800: the other berth projects on this machine sit at 14200 (opsduty), 14400
+  // (launchpad), 14600 (hub), 17300 (workspace) and 47200 (auth), each stride 10 over 10 slots.
+  // 14800-14909 continues that family in the first free gap above hub, and nothing was
+  // listening there when it was chosen. It is also well clear of 8000, which is the port a
+  // `mkdocs serve` outside berth takes by default, so an ad-hoc serve in the main checkout and
+  // a berth workspace cannot collide.
+  "slots": { "count": 10, "base": 14800, "stride": 10 },
+
+  // Port name -> offset within the slot's stride. Slot 1 gets DOCS_PORT=14810, slot 2 gets 14820.
+  // This repo is a single mkdocs-material site: one process, one port. mkdocs serve puts the
+  // livereload websocket on that same port, so there is no second port to name.
+  // The stride of 10 is slack rather than need - it leaves room to add a port later without
+  // renumbering the band.
+  "ports": { "DOCS_PORT": 0 },
+
+  // Nothing to seed. The site builds and serves with no .env and no credentials; the only
+  // gitignored things a workspace needs are .venv/ and node_modules/, and setup builds both
+  // from the committed lockfiles.
+  "seed": [],
+
+  "hooks": {
+    "setup": "./scripts/setup.sh",
+    "run": "./scripts/run.sh",
+    "teardown": "./scripts/teardown.sh"
+  },
+
+  // A cold `poetry install` plus `npm ci`, and the social plugin rendering every card on the
+  // first build, is too slow to pay on every `berth new`. Start it with `berth run`.
+  "autostart": false
+}

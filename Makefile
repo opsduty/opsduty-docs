@@ -2,7 +2,7 @@ PACKAGE      = opsduty-docs
 BASE  	     = $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 NODE_MODULES = $(BASE)/node_modules
 
-POETRY      = poetry
+UV          = uv
 NPM         = npm
 
 V = 0
@@ -13,13 +13,13 @@ M = $(shell printf "\033[34;1m▶\033[0m")
 all: lint format build ; @ ## Build project
 	$Q
 
-$(POETRY): ; $(info $(M) checking POETRY…)
+$(UV): ; $(info $(M) checking UV…)
 	$Q
 
 $(NPM): ; $(info $(M) checking NPM…)
 	$Q
 
-$(BASE): | $(POETRY) ; $(info $(M) checking PROJECT…)
+$(BASE): | $(UV) ; $(info $(M) checking PROJECT…)
 	$Q
 
 .PHONY: lint
@@ -34,13 +34,13 @@ format: format-prettier | $(BASE) ; @ ## Run all formatter
 
 .PHONY: build
 build: .venv | $(BASE) ; $(info $(M) running build…) @ ## Run build
-	$Q cd $(BASE) && $(POETRY) run mkdocs build
+	$Q cd $(BASE) && $(UV) run mkdocs build
 
 # Serve
 
 .PHONY: serve
 serve: .venv | $(BASE) ; $(info $(M) running serve…) @ ## Run serve
-	$Q cd $(BASE) && $(POETRY) run mkdocs serve
+	$Q cd $(BASE) && $(UV) run mkdocs serve
 
 # Linters
 
@@ -56,9 +56,8 @@ format-prettier: node_modules | $(BASE) ; $(info $(M) running prettier…) @ ## 
 
 # Dependency management
 
-.venv: pyproject.toml poetry.lock | $(BASE) ; $(info $(M) retrieving dependencies…) @ ## Install python dependencies
-	$Q cd $(BASE) && $(POETRY) run pip install -U pip
-	$Q cd $(BASE) && $(POETRY) install
+.venv: pyproject.toml uv.lock | $(BASE) ; $(info $(M) retrieving dependencies…) @ ## Install python dependencies
+	$Q cd $(BASE) && $(UV) sync --locked
 	@touch $@
 
 node_modules: package.json package-lock.json | $(BASE) ; $(info $(M) retrieving frontend dependencies…) @ ## Install nodejs dependencies

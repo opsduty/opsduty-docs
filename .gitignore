@@ -1,3 +1,10 @@
 node_modules/
 site/
 .cache/
+.venv/
+.worktrees/
+
+# The interpreter pin is part of the project: uv reads it to pick (and download) the python this
+# site builds with, and pyenv reads it locally. A global ignore commonly excludes it, so this
+# negation keeps it tracked for everyone.
+!.python-version

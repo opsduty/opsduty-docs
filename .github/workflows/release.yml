@@ -18,9 +18,14 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
-      - name: Setup Python project
-        uses: ./.github/actions/setup-python
+      # uv installs the interpreter named in .python-version itself, so there is no
+      # separate python setup step.
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v8
         with:
-          tool-versions-path: .tool-versions
+          enable-cache: true
+          cache-dependency-glob: uv.lock
 
-      - run: mkdocs gh-deploy --force
+      # Previously bare `mkdocs`, which worked only because the old composite action put
+      # .venv/bin on $GITHUB_PATH. uv run resolves it from uv.lock instead.
+      - run: uv run mkdocs gh-deploy --force
