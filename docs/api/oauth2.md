@@ -20,6 +20,7 @@ The following scopes are currently available:
 
 - **api** - Allow access to our GraphQL API.
 - **api:v1** - Allow access to our REST API v1.
+- **mcp** - Allow access to our MCP API.
 
 The scopes are requested when the token is generated.
 
