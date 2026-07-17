@@ -24,9 +24,14 @@ create a new incident or append the event to an existing one based on a
 
 ## Silence
 
-An incident can be silenced for a specific period. When silenced, OpsDuty pauses
-the escalation policy execution. If the incident is not acknowledged or resolved
-before the silence period ends, it will transition back to the triggered state.
+An incident can be silenced, which pauses the escalation policy execution. You
+can silence an incident for a specific period or leave it silenced indefinitely.
+
+When you set a period, the incident automatically returns to the triggered state
+once the period ends, unless it was acknowledged or resolved in the meantime.
+When you silence without a period, the incident stays silenced until you
+un-silence it. Un-silencing returns the incident to the triggered state and
+resumes the escalation policy.
 
 ## Reassign
 
