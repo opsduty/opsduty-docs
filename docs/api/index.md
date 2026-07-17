@@ -7,5 +7,5 @@ of the existing clients, but it is also possible to use tools like `curl` or
 
 ## Versions
 
-- [V1](https://opsduty.io/api/v1) - Current version [[Swagger](swagger.md)]
-  [[OpenAPI](openapi.md)]
+- [V1](https://opsduty.io/api/v1) - Current version
+  [[API reference](swagger.md)] [[OpenAPI](openapi.md)]

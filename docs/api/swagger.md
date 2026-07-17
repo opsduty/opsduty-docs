@@ -1,7 +1,8 @@
-# Swagger documentation
+# API reference
 
-Swagger documentation is a tool for designing, visualizing, and interacting with
-RESTful APIs, based on the OpenAPI Specification.
+The API reference is an interactive view of the REST API, rendered with Scalar
+and generated from the [OpenAPI Specification](openapi.md). It lists the
+available endpoints together with their request and response schemas.
 
-OpsDuty exposes its Swagger documentation on
+OpsDuty exposes its API reference on
 [https://opsduty.io/api/v1/docs](https://opsduty.io/api/v1/docs).

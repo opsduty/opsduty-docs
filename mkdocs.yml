@@ -112,7 +112,7 @@ nav:
   - API:
       - Getting Started: api/index.md
       - OAuth2: api/oauth2.md
-      - Swagger: api/swagger.md
+      - API reference: api/swagger.md
       - OpenAPI: api/openapi.md
       - Clients:
           - Python:
