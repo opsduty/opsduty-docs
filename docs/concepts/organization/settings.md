@@ -6,7 +6,7 @@ The organization settings page can be found
 OpsDuty allows you to change your organization verbose name.
 
 The organization domain cannot be changed directly in the organization settings,
-please contact [support@opsduty.io](mailto:support@opsduty.io) you want to
+please contact [support@opsduty.io](mailto:support@opsduty.io) if you want to
 change that. The organization domain is used when users authenticate together
 with their username and password.
 
@@ -38,7 +38,7 @@ the organization cannot be restored.
 You can close your organization by visiting this
 [link](https://opsduty.io/app/organization/close-organization).
 
-Closing the organization consist in multiple steps:
+Closing the organization consists of multiple steps:
 
 1.  Complying with the close organization prerequisite tests.
 
