@@ -82,8 +82,8 @@ selected field. The available operations are:
   selected field.
 - **Exists**: Matches if the selected field exists.
 - **Jinja Expression**: Matches if the Jinja template returns a truthy value
-  (e.g., `y`, `yes`, `true`, `on`, `1`, `ok`). The selected field is available
-  as the `field` variable.
+  (`y`, `yes`, `t`, `true`, `on`, `1` or `ok`, case-insensitive). The selected
+  field is available as the `field` variable.
 - **Matches**: Matches if the selected field is equal to the specified value.
 - **Matches part**: Matches if the selected field contains the specified value.
 - **Matches regex**: Matches if the specified regex matches the selected field.
