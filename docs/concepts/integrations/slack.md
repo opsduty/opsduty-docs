@@ -47,10 +47,9 @@ incident in OpsDuty directly from a message in a Slack channel.
 
 #### Who is On-Call?
 
-Type `/who` in Slack to access the "Who is on-call?" shortcut. This allows you
-to quickly find the responsible responder for a specific service.
+Type `/opsduty oncall` in Slack to quickly find the responder currently on call
+for a specific service.
 
 #### Trigger Incident
 
-Type `/trigger` in Slack to access the "Trigger New Incident" shortcut. This
-feature enables you to initiate a new incident directly from Slack.
+Type `/opsduty trigger` in Slack to start a new incident directly from Slack.
