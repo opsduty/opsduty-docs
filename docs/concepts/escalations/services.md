@@ -23,9 +23,10 @@ concept. This allows you to select the destination service in OpsDuty using
 rules, rather than configuring the destination service at the source of the
 incident data.
 
-Currently, the routing key is only utilized by the webhook integration. To
-enable a service to process data, replace the `<routing-key>` portion of the URL
-with the specific routing key for that service.
+The routing key is used by the webhook and email integrations to select the
+destination service. For the webhook integration, replace the `<routing-key>`
+portion of the URL with the specific routing key for that service. For the email
+integration, you select the routing key when configuring the integration.
 
 Example Webhook URL:
 `https://opsduty.io/integrations/webhooks/enque/event/<webhook-integration-key>/<routing-key>`
