@@ -49,11 +49,14 @@ the option:
 ## Registering Check-Ins
 
 Periodic jobs must be configured to send a ping (check-in) to OpsDuty upon
-successful execution. This is done by sending an HTTP GET request to the
+successful execution. This is done by sending an HTTP GET or POST request to the
 environment-specific check-in URL, which can be copied from the environment menu
 under `Copy checkin URL...`.
 
 - **Authentication**: The check-in URL does not require authentication.
+- **Rate limit**: Check-ins are limited to 5 requests per minute per
+  environment. Requests above that limit are rejected with a HTTP 429 status
+  code and do not register a check-in.
 
 ## Programmatic Management of Heartbeats and Environments
 
