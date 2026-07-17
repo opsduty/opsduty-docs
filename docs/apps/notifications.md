@@ -38,9 +38,8 @@ Your device is listed below the `Push devices` section on the
 [Notifications](https://opsduty.io/app/user/notifications) page in OpsDuty after
 you have downloaded the App and logged in.
 
-You can send a test push message to the devices by pressing "Send test
-notification with high urgency" or "Send test notification with low urgency" in
-the device menu.
+You can send a test push message to the devices by pressing "Send test (high
+urgency)" or "Send test (low urgency)" in the device menu.
 
 ## Limitations
 
