@@ -65,3 +65,10 @@ need voice and SMS notifications when new incidents are triggered.
     them to the responsible person for the selected destination service. If only
     one destination is configured, the caller will not be presented with
     alternative options.
+
+    !!! note "Caller greeting"
+
+        Set a "Greeting message" to have OpsDuty read a short message to the
+        caller before the destination options. Enable "Skip service name read
+        out" if you do not want OpsDuty to read the selected service name to the
+        caller.
