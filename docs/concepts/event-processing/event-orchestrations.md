@@ -5,10 +5,10 @@ is utilized when the service receives new events.
 Event orchestrations allow for the configuration of transformations, which
 dictate how OpsDuty processes incoming events.
 
-A routing rule generally applies to a service but can be limited to a specific
-routing rule. Event orchestration will only be used if the routing rule directs
-the event to the associated event orchestration service. This provides a way to
-restrict the use of event orchestrations.
+An event orchestration generally applies to a service but can be limited to a
+specific routing rule. When limited, the event orchestration is only used if the
+event was routed to its service through that routing rule. This provides a way
+to restrict the use of event orchestrations.
 
 ## Conditions
 
