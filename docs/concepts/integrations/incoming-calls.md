@@ -42,10 +42,11 @@ need voice and SMS notifications when new incidents are triggered.
 
 #### Purchase a New Number
 
-1. Click "Purchase Number".
+1. Click "Purchase number".
 2. Select a country and number type, scroll down, and click "Search".
 3. You will see a list of available numbers along with their monthly prices.
-4. Click "Purchase Number". This step will affect your Twilio account balance.
+4. Click "Purchase" next to the number you want. This step will affect your
+   Twilio account balance.
 5. The new number will now appear in your list of numbers.
 
 #### Configure a Phone Number
