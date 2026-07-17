@@ -10,10 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Python project
-        uses: ./.github/actions/setup-python
+      # uv installs the interpreter named in .python-version itself, so there is no
+      # separate python setup step. `make build` runs `uv sync --locked`.
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v8
         with:
-          tool-versions-path: .tool-versions
+          enable-cache: true
+          cache-dependency-glob: uv.lock
 
       - name: Setup Node project
         uses: ./.github/actions/setup-node

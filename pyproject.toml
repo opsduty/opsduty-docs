@@ -1,16 +1,17 @@
-[tool.poetry]
+[project]
 name = "opsduty-docs"
 version = "0.0.1"
 description = "Incident management system."
-authors = ["Eirik Martiniussen Sylliaas <eirik@sylliaas.no>"]
+authors = [
+    { name = "Eirik Martiniussen Sylliaas", email = "eirik@sylliaas.no" },
+]
 readme = "README.md"
-package-mode = false
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "mkdocs-material[imaging]>=9.7.6,<10.0.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-mkdocs-material = {version="^9.7.6", extras=["imaging"]}
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.uv]
+# The old [tool.poetry] section set package-mode = false: this repo is a docs site, not a
+# distributable package, so there is nothing to build or install into the environment.
+package = false

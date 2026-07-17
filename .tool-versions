@@ -1,3 +1,2 @@
-python 3.12.8
-poetry 1.8.4
+# Python lives in .python-version, which uv and pyenv both read. uv installs the interpreter.
 nodejs 20.18.1
