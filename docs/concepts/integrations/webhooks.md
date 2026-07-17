@@ -39,3 +39,22 @@ The configured receiving channel processes the posted payload, generating an
 incident event. This event will either trigger a new incident (if no matching
 open incident with the same deduplication identifier exists) or be added to an
 existing open incident.
+
+### Response
+
+Incidents are created asynchronously, so a successful request returns HTTP 202
+Accepted with a reference instead of the incident itself:
+
+```json
+{ "incident_reference_id": "IRQ7M2XK9TBW4D" }
+```
+
+To find out what happened to the event, pass that value to the
+[REST API](../../api/index.md) endpoint
+`/api/v1/incidents/incident-reference/{incident_reference_id}/`. The reference
+reports a status of `pending`, `completed`, `failed` or `stopped`, along with a
+reason when the event did not complete.
+
+Requests to the webhook endpoint are limited to 10 per second for each
+combination of webhook and routing key. Requests above that limit are rejected
+with a HTTP 429 status code.
