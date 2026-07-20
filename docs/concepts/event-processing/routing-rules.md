@@ -13,9 +13,10 @@ determine the appropriate service destination.
 In OpsDuty, each routing rule is assigned a unique routing key. This key is used
 to direct incident data to the appropriate routing rule.
 
-Currently, the routing key is only utilized by the webhook integration. To
-enable a routing rule to process data, replace the `<routing-key>` portion of
-the URL with the specific routing key for that rule.
+The routing key is used by the webhook and email integrations to select the
+routing rule. For the webhook integration, replace the `<routing-key>` portion
+of the URL with the routing key for that rule. For the email integration, you
+select the routing key when configuring the integration.
 
 Example Webhook URL:
 `https://opsduty.io/integrations/webhooks/enque/event/<webhook-integration-key>/<routing-key>`
