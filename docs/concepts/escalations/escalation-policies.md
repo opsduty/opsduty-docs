@@ -12,20 +12,22 @@ notified—that is managed by their personal
 An escalation policy can include one or more steps, which OpsDuty executes in
 the order they are defined. The following types of steps are available:
 
-- **Notify**: Notify specific individuals, team members, or people from an
-  active shift in a schedule. You can also configure the notification channel to
-  be used for sending notifications.
-- **Notify if number of events in time window**: Pause the execution of the
-  escalation policy unless a certain number of incident events occur within a
-  specified time window.
-- **Notify if time**: Continue executing the escalation policy step if the
-  current time falls within the specified time window. If the time is outside
-  the window, the policy execution pauses.
+- **Notify responders**: Notify specific individuals, team members, or people
+  from an active shift in a schedule. You can also configure the notification
+  channel to be used for sending notifications.
+- **Notify only after repeated events**: Pause the execution of the escalation
+  policy unless a certain number of incident events occur within a specified
+  time window.
+- **Notify only within a time window**: Continue executing the escalation policy
+  step if the current time falls within the specified time window. If the time
+  is outside the window, the policy execution pauses.
 - **Repeat escalation**: Return to the first step of the escalation policy. This
   step can repeat up to five times. If the policy has already looped through
   five cycles, this step becomes a no-op.
-- **Resolve**: Automatically resolve the incident when this step is executed.
+- **Resolve incident**: Automatically resolve the incident when this step is
+  executed.
 - **Wait**: Pause for a specified number of minutes before executing the next
   step in the escalation policy.
 
-The two most commonly used types are the **Notify** and **Wait** policy steps.
+The two most commonly used types are the **Notify responders** and **Wait**
+policy steps.
