@@ -60,6 +60,13 @@ need voice and SMS notifications when new incidents are triggered.
         The "SMS Notifications" and "Voice Notifications" switches control whether
         OpsDuty is allowed to use this number for notifications.
 
+    !!! note "Call handler"
+
+        The "Call handler" setting decides what happens when someone calls the
+        number. "Dial responder" connects the caller to the responsible person
+        for the selected destination. "Voicemail" records a message from the
+        caller instead.
+
 3.  Configure Destinations:
 
     A destination represents a digit the caller can select, which will connect
