@@ -52,7 +52,7 @@ following options are available:
   frequency with an interval of 1 starts shifts every day; a weekly frequency
   with an interval of 3 starts shifts every three weeks).
 - **Handoff time**: Specifies when a recurring shift begins.
-- **Repeat shifts until**: Optionally sets an end date for generating shifts.
+- **Repeat until**: Optionally sets an end date for generating shifts.
 - **Repeat on days**: Available for **Weekly** or **Monthly** frequencies.
   Allows shifts to be created on selected days without assigning new responder
   groups. Useful for managing different shifts on weekdays and weekends.
