@@ -104,6 +104,9 @@ nav:
           - Settings: concepts/organization/settings.md
           - Single Sign-On: concepts/organization/single-sign-on.md
 
+      - Status Pages:
+          - Visitor Access: concepts/status-pages/visitor-access.md
+
       - Integrations:
           - Incoming Calls: concepts/integrations/incoming-calls.md
           - Slack: concepts/integrations/slack.md
