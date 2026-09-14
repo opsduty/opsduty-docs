@@ -129,6 +129,79 @@ error page instead of sending the visitor to sign in again.
     Otherwise anyone can use your sign-in to send your users to a site of their
     choosing.
 
+### Reading the API from your server
+
+The status page has a JSON API, for instance to show the current status inside
+your own product. On a page behind a sign-in, your server can read it without a
+visitor by sending a token in an `Authorization: Bearer` header:
+
+- `GET /api/status`: component groups, components, and the most recent
+  incidents.
+- `GET /api/incidents/<id>`: a single incident with its full timeline.
+- `GET /api/openapi.json`: the OpenAPI schema describing both.
+
+Sign the token the same way as for visitors. Keep it short-lived, and sign a new
+one when it expires: a token that expires more than 7 days after it is sent is
+rejected. A request without a valid token gets a `401` response, and so does
+every other address under `/api/`.
+
+=== "curl"
+
+    ```bash
+    curl https://status.example.com/api/status \
+      -H "Authorization: Bearer $TOKEN"
+    ```
+
+=== "Node.js"
+
+    ```javascript
+    import * as jose from 'jose';
+
+    const token = await new jose.SignJWT({})
+      .setProtectedHeader({ alg: 'HS256' })
+      .setIssuedAt()
+      .setExpirationTime('5m')
+      .sign(new TextEncoder().encode(process.env.STATUS_PAGE_SIGNING_KEY));
+
+    const response = await fetch('https://status.example.com/api/status', {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    const status = await response.json();
+    ```
+
+=== "Python"
+
+    ```python
+    import os
+    from datetime import datetime, timedelta, timezone
+
+    import jwt
+    import requests
+
+    now = datetime.now(timezone.utc)
+    token = jwt.encode(
+        {"iat": now, "exp": now + timedelta(minutes=5)},
+        os.environ["STATUS_PAGE_SIGNING_KEY"],
+        algorithm="HS256",
+    )
+
+    response = requests.get(
+        "https://status.example.com/api/status",
+        headers={"Authorization": f"Bearer {token}"},
+    )
+    status = response.json()
+    ```
+
+!!! warning
+
+    Only send these requests from your server. Never put the signing key or a
+    token signed for the API in a browser or mobile app, where anyone can read
+    it.
+
+The API on a public page needs no token. A page for OpsDuty members does not
+show its signing key, so its API can only be read by visitors signed in to the
+page.
+
 ### Signing out
 
 Send visitors to `/~auth/logout/` on the status page, for example
